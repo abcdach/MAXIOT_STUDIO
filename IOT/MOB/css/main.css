@@ -1,0 +1,13 @@
+
+	.noshadow * {
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+	}
+	form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
+		color: #666;
+	}
+	
+	textarea {
+		height: 150px; /* any value you want */
+	}

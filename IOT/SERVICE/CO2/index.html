@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html >
+
+
+<style>
+       #xxx { width: 100%; background-color: #333334; }
+       
+       .dygraph-title { color: #E0E0E3; }
+       .dygraph-ylabel { color: #FCC168; }
+       
+       
+</style>
+<link rel="stylesheet" href="css/style.css">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>MAXIOT</title>
+  </head>
+
+  <body bgcolor="#333334">
+    
+<script type="text/javascript" src="./Live random data_files/dygraph-dev.js"></script><script type="text/javascript" src="./Live random data_files/console.js"></script>
+<script type="text/javascript" src="./Live random data_files/dashed-canvas.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-options.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-layout.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-canvas.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-utils.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-gviz.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-interaction-model.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-tickers.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-plugin-base.js"></script>
+<script type="text/javascript" src="./Live random data_files/annotations.js"></script>
+<script type="text/javascript" src="./Live random data_files/axes.js"></script>
+<script type="text/javascript" src="./Live random data_files/chart-labels.js"></script>
+<script type="text/javascript" src="./Live random data_files/grid.js"></script>
+<script type="text/javascript" src="./Live random data_files/legend.js"></script>
+<script type="text/javascript" src="./Live random data_files/range-selector.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-plugin-install.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-options-reference.js"></script>
+<script type="text/javascript" src="./Live random data_files/datahandler.js"></script>
+<script type="text/javascript" src="./Live random data_files/default.js"></script>
+<script type="text/javascript" src="./Live random data_files/default-fractions.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-error.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-custom.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-fractions.js"></script>   
+    
+<section id="main-column" class="dashboard">
+  <div id="about">
+    <h1> <span>MAXIOT</span><span> Home Monitoring System</span></h1>
+    <p><a class="j5-link">Info : </a><a id="sysinfo"></a></p>
+  </div>
+  <div id="sensorValues">
+    <div class="sensor-values">
+      <div class="volts"></div>
+      <label></label>
+    </div>
+    <div class="sensor-values">
+      <div class="amps" id="Text_S1X" >0.0</div>
+      <label>ppm</label>
+    </div>
+    <div class="sensor-values">
+      <div class="moisture"></div>
+      <label></label>
+    </div>
+  </div>
+
+</section>
+<div id="xxx" >
+	<div id="div_g" style=" height:300px; width: 97%;"></div>
+</div>
+
+    
+    
+    <script type="text/javascript">
+      var data = [];
+      var x_data = 0;
+      var g = new Dygraph(document.getElementById("div_g"), data,
+                          {
+    	  					//title:  'SENSOR DATA',
+    	  					ylabel: 'Carbon Dioxide (CO2)',
+    	  					
+    	  					labelsDivStyles: { 'textAlign': 'right' },
+    	  					
+    	  					//fillGraph: true,
+    	  				    //fillAlpha: 0.15,
+    	  					
+    	  					//rollPeriod: 4,
+    	  
+                            //drawPoints: true,
+                            //showRoller: true,
+                            valueRange: [200, 2100],
+                            labels: ['Time', 'Random'],
+      
+                            //drawAxis: false,
+                            //drawGrid: false
+                            drawXGrid: false,
+                            
+                            strokeWidth: 3,
+                            strokeBorderColor: "#90EE7E",
+                            colors: ['#FCC168', '#EE1111', '#8AE234'],
+                            
+                            //plotter: 3,
+                            
+                            //axisLineWidth: 0,
+                            axisLineColor: "#333334",
+                            axisLabelColor: "#E0E0E3",//"#90EE7E",
+                            
+                            gridLineColor: "#6D6D6F",
+                            gridLineWidth: 2
+      
+                          }
+   
+      
+      
+      );
+      setInterval(function() {
+        var x = new Date();  // current time
+        var y = fff;
+        $('#Text_S1X').text(y); 
+        data.push([x, y]);
+        x_data ++;
+        if(x_data>600*4){
+        	data.splice(0, 1);
+        	x_data--;
+        }
+        g.updateOptions( { 'file': data } );
+      }, 1000);
+
+    </script>
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/MyBase64.js"></script>
+<script src="js/WebSocket.js"></script>
+    
+    
+    
+    
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <script>
+	var fff = 0;
+	$(document).ready(function()
+	{
+		websocket_START();
+	});
+	function TERMINAL( message ) {
+		//$('#pTest').text(message);
+	}
+	function Print_Data_Stream_0(Data){ 
+		fff = Data;
+	}
+	function Print_Data_Stream_1(Data){ 		
+	}
+	function Print_Data_Stream_2(Data){ $('#Text_S2').text(Data); }
+	function Print_Data_Stream_3(Data){ $('#Text_S3').text(Data); }
+	function Print_Data_Stream_4(Data){ $('#Text_S4').text(Data); }
+	function Print_Data_Stream_5(Data){ $('#Text_S5').text(Data); }
+	function Print_Data_Stream_6(Data){ $('#Text_S6').text(Data); }
+	function Print_Data_Stream_7(Data){ $('#Text_S7').text(Data); }
+ </script>  
+       
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

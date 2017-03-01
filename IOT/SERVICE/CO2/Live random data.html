@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://dygraphs.com/tests/dynamic-update.html -->
+<html><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <title>Live random data</title>
+    <!--[if IE]>
+    <script type="text/javascript" src="../excanvas.js"></script>
+    <![endif]-->
+    <!--
+    For production (minified) code, use:
+    <script type="text/javascript" src="dygraph-combined.js"></script>
+    -->
+<script type="text/javascript" src="./Live random data_files/dygraph-dev.js"></script><script type="text/javascript" src="./Live random data_files/console.js"></script>
+<script type="text/javascript" src="./Live random data_files/dashed-canvas.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-options.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-layout.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-canvas.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-utils.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-gviz.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-interaction-model.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-tickers.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-plugin-base.js"></script>
+<script type="text/javascript" src="./Live random data_files/annotations.js"></script>
+<script type="text/javascript" src="./Live random data_files/axes.js"></script>
+<script type="text/javascript" src="./Live random data_files/chart-labels.js"></script>
+<script type="text/javascript" src="./Live random data_files/grid.js"></script>
+<script type="text/javascript" src="./Live random data_files/legend.js"></script>
+<script type="text/javascript" src="./Live random data_files/range-selector.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-plugin-install.js"></script>
+<script type="text/javascript" src="./Live random data_files/dygraph-options-reference.js"></script>
+<script type="text/javascript" src="./Live random data_files/datahandler.js"></script>
+<script type="text/javascript" src="./Live random data_files/default.js"></script>
+<script type="text/javascript" src="./Live random data_files/default-fractions.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-error.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-custom.js"></script>
+<script type="text/javascript" src="./Live random data_files/bars-fractions.js"></script>
+
+
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+  <body>
+    <h3 style="width:800px; text-align: center;">Live random data</h3>
+    <div id="div_g" style="width:800px; height:400px;"><div style="text-align: left; position: relative; width: 800px; height: 400px;"><canvas width="1000" height="500" style="position: absolute; width: 800px; height: 400px;"></canvas><canvas width="1000" height="500" style="position: absolute; width: 800px; height: 400px;"></canvas><input type="text" size="2" style="display: block; position: absolute; z-index: 10; top: 355px; left: 57px;"><div class="dygraph-legend" style="position: absolute; font-size: 14px; z-index: 10; width: 250px; top: 0px; left: 544px; line-height: normal; text-align: left; overflow: hidden; display: none; background: white;"></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 366px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 341.333px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.1</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 309.667px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.2</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 278px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.3</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 246.333px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.4</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 214.667px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.5</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 183px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.6</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 151.333px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.7</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 119.667px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.8</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 88px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">0.9</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 56.3333px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">1</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 24.6667px; left: 3px; text-align: right;"><div class="dygraph-axis-label dygraph-axis-label-y">1.1</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 383px; left: 81.2878px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:00</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 383px; left: 214.718px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:10</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 383px; left: 348.149px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:20</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 383px; left: 481.579px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:30</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 383px; left: 615.01px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:40</div></div><div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: right; top: 383px; left: 740px;"><div class="dygraph-axis-label dygraph-axis-label-x">21:50</div></div></div></div>
+
+    <script type="text/javascript">
+      var data = [];
+      var t = new Date();
+      for (var i = 10; i >= 0; i--) {
+        var x = new Date(t.getTime() - i * 1000);
+        data.push([x, Math.random()]);
+      }
+
+      var g = new Dygraph(document.getElementById("div_g"), data,
+                          {
+                            drawPoints: true,
+                            showRoller: true,
+                            valueRange: [0.0, 1.2],
+                            labels: ['Time', 'Random']
+                          });
+      setInterval(function() {
+        var x = new Date();  // current time
+        var y = Math.random();
+        data.push([x, y]);
+        g.updateOptions( { 'file': data } );
+      }, 1000);
+
+    </script>
+
+    <p>This test is modeled after a <a href="http://www.highcharts.com/demo/?example=dynamic-update&amp;theme=default">highcharts
+      test</a>. New points should appear once per second. Try zooming and
+    panning over to the right edge to watch them show up.</p>
+  
+
+</body></html>

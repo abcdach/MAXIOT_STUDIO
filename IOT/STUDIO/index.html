@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+       
+    <meta charset="UTF-8">
+    <title>MAXIOT</title>        
+        
+    <link rel="stylesheet" href="lib/codemirro/codemirror.css">
+    <script src="lib/codemirro/codemirror.js"></script>
+    <script src="lib/codemirro/matchbrackets.js"></script>
+    <script src="lib/codemirro/python.js"></script>
+    <style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style> 	
+
+    <link type="text/css" href="lib/Aristo.css" rel="stylesheet" />
+
+    <script src="lib/P5/p5.js" type="text/javascript"></script>
+    <script src="lib/P5/p5.dom.js" type="text/javascript"></script>
+    <script src="lib/P5/p5.sound.js" type="text/javascript"></script>
+
+	<script src="iot_Local_Storage.js" type="text/javascript"></script>
+    <script src="iot_p5.js" type="text/javascript"></script>
+    <script src="iot_websocket.js" type="text/javascript"></script>
+    <script src="iot_menu.js" type="text/javascript"></script>
+    <script src="iot_info.js" type="text/javascript"></script>
+    <script src="iot_VCB.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="lib/QR/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/QR/qrcode.js"></script>
+    
+
+    <script>
+    //#wrap { width: 600px; height: 490px; padding: 0; overflow: hidden; }
+    //#frame { width: 433px; height: 633px; border: 1px solid black; }
+    //#frame { zoom: 0.75; -moz-transform: scale(0.75); -moz-transform-origin: 0 0; }
+    
+    //width:  327px;
+    //height: 476px;
+    //border: 1;
+    </script>
+<style>
+#wrap
+{
+    width: 370px;
+    height: 500px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#frame
+{
+    width: 360px;
+    height: 527px;
+    border: 1;
+
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+</style>
+
+
+
+</head>
+    <body class="ui-form">
+    
+        <div id="CodeMir"><textarea id="code" name="code">
+        class ExampleClass(ParentClass):
+            @staticmethod
+            def example(inputStr):
+                a = list(inputStr)
+                a.reverse()
+                return ''.join(a)
+            def __init__(self, mixin = 'Hello'):
+                self.mixin = mixin
+        </textarea></div>
+
+        
+
+    </body>
+</html>
+
+
