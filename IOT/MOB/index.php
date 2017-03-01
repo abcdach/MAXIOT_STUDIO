@@ -1,5 +1,5 @@
 <?php include '../Config/MySQL.php';?>
-<?php include '../Config/IP.php';?>
+
 <?php
 	class UI{
 		public $Index;

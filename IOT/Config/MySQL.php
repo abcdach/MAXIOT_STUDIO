@@ -1,6 +1,6 @@
 <?php
 	$mysql_host     = 'localhost';
-	$mysql_user     = 'MAXIOT';
-	$mysql_password = 'dach';
-	$mysql_dbname   = 'MAXIOT';
+	$mysql_user     = 'temp';
+	$mysql_password = 'temp';
+	$mysql_dbname   = 'temp';
 ?>

@@ -16,8 +16,8 @@
 <script>
 var myDev = <?php echo $Dev;?>;	
 
-var websocket_ip_0     = <?php echo "\"".$Internal_IP."\"";?>;
-var websocket_port_0   = <?php echo "\"".$Internal_PORT."\"";?>;
+var websocket_ip_0     = document.location.host;
+var websocket_port_0   = 3002;
 var websocket_ip_1     = <?php echo "\"".$External_IP."\"";?>;
 var websocket_port_1   = <?php echo "\"".$External_PORT."\"";?>;
 

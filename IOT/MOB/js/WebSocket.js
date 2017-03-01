@@ -1,17 +1,8 @@
-
-
 var websocket;
 var websocket_auto_connect = 1;
 var websocket_device = 787;
 var websocket_ip    = "";
 var websocket_port  = "";
-
-//var websocket_ip_0     = "149.3.111.194";
-//var websocket_port_0   = "4002";
-//var websocket_ip_1     = "10.0.0.100";
-//var websocket_port_1   = "3002";
-
-
 var websocket_ip_port = 0;
 var websocket_Text = 0;
 var websocket_NAME  = "";
@@ -115,17 +106,9 @@ function websocket_STATE() {
 	setTimeout(websocket_STATE, 1000);
 }
 
-//Print_WS_Status("Connected...  "+ WS_TimeOUT + "s");
-//WS_TimeOUT ++;
-//var Msg = "{\"N\":\"0\",\"S\":\"0\",\"T\":\"0\",\"V\":\""+WS_TimeOUT+"\"}"; websocket_send(Msg);
-
-
-
 function Print_WS_Status(DATA){
-	//$('#WS_STATUS').text("STATUS : "+DATA);
 		MyHeader_wText(DATA);
 	}
-
 
 function Process_Stream(){
 	
