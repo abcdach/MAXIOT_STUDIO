@@ -220,7 +220,7 @@ function DOM_WebMob_IMG_MOB_SIMULile_screen_show() {
 	var Device_Name = DOM_WebMob_INP_Device.value();
 	//var Data = "http://" + MyIP + "/iot/mob/123.php?Dev="+Device_Name;
 	//var Data = "../MOB/index.php";
-	var Data = "http://" + My_HOST + "/MAXIOT/MOB/MOB.php?Dev="+Device_Name
+	var Data = "http://" + SERVER_IP + "/IOT/MOB/MOB.php?Dev="+Device_Name
 	info.announce(1, "", Data);
 	Mobile_screen_show(Data);
 }
