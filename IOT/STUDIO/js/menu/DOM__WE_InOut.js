@@ -127,10 +127,11 @@ function OBJECT_DOM_WebMob_OutPut() {
 	//DOM_WebMob_IMG_READ_InPut.mousePressed(DOM_WebMob_InPut_READ);
     ////////////////////////////////////// 	
 
-	this.show = function(Device_Name, OutPut_index, In_Out) {
+	this.show = function(Device_Name, OutPut_index, In_Out, Status) {
 		this.Device_Name = Device_Name;
 		this.OutPut_index = OutPut_index;
 		this.In_Out = In_Out;
+		this.Status = Status;
 		dom__hide_all();
 	
 		DOM_WebMob_ELEM_Progress.attribute("value", "0");
@@ -139,8 +140,13 @@ function OBJECT_DOM_WebMob_OutPut() {
 		DOM_WebMob_INP_Device.value(this.Device_Name);
 		DOM_WebMob_INP_InOut_index.value(this.OutPut_index);
 		
-	
+		//############################################################################
+		DOM_WebMob_P_Device.show();
+		DOM_WebMob_INP_InOut_index.show();
+		DOM_WebMob_INP_Device.show();
+		//############################################################################
 		if(this.In_Out === "InPut"){
+			
 			W2._Text(xText[29]); //"Device - InPut"
 			dom__WebMob_InPut_UI_None.show();
 			DOM_WebMob_SELECT_InPut.selected('0');
@@ -150,7 +156,31 @@ function OBJECT_DOM_WebMob_OutPut() {
 			DOM_WebMob_SELECT_InPut.style('background-color', '#E0F7FF');
 			DOM_WebMob_INP_InOut_index.style('background-color', '#E0F7FF');
 			DOM_WebMob_INP_Description.style('background-color', '#E0F7FF');			
+			
+			
+			DOM_WebMob_P_InPut.show();
+			if(this.Status===1){
+				////////////////////////////////////////
+				DOM_WebMob_P_Description.show();	
+				DOM_WebMob_P_UIElement.show();			
+				DOM_WebMob_INP_Description.show();	
+				DOM_WebMob_ELEM_Progress.show();
+				DOM_WebMob_IMG_MOB_SIMUL.show();			
+				////////////////////////////////////////
+				
+				DOM_WebMob_SELECT_InPut.show();
+				DOM_WebMob_IMG_SAVE_InPut.show();
+				//DOM_WebMob_IMG_READ_InPut.show();				
+				////////////////////////////////////////
+				DOM_WebMob_InPut_READ();
+				////////////////////////////////////////
+			}else{
+				
+				dom__WebMob_UI_hide();
+								
+			}
 		}
+		//############################################################################
 		if(this.In_Out === "OutPut"){
 			W2._Text(xText[26]); //"Device - OutPut"
 			dom__WebMob_OutPut_UI_None.show();
@@ -161,37 +191,32 @@ function OBJECT_DOM_WebMob_OutPut() {
 			DOM_WebMob_SELECT_InPut.style('background-color', '#FFF1F1');
 			DOM_WebMob_INP_InOut_index.style('background-color', '#FFF1F1');
 			DOM_WebMob_INP_Description.style('background-color', '#FFF1F1');
-		}
-		
-		DOM_WebMob_P_Device.show();
-		DOM_WebMob_P_Description.show();
-		DOM_WebMob_INP_Device.show();
-		DOM_WebMob_INP_Description.show();
-		DOM_WebMob_INP_InOut_index.show();
-		DOM_WebMob_P_UIElement.show();
-		DOM_WebMob_ELEM_Progress.show();
-		DOM_WebMob_IMG_MOB_SIMUL.show();
-		
-		if(this.In_Out === "InPut"){
-			DOM_WebMob_P_InPut.show();
-			DOM_WebMob_SELECT_InPut.show();
-			DOM_WebMob_IMG_SAVE_InPut.show();
-			//DOM_WebMob_IMG_READ_InPut.show();
-		}
-		if(this.In_Out === "OutPut"){
+			
+			
 			DOM_WebMob_P_OutPut.show();
-			DOM_WebMob_SELECT_OutPut.show();
-			DOM_WebMob_IMG_SAVE_OutPut.show();
-			//DOM_WebMob_IMG_READ_OutPut.show();
-			DOM_WebMob_OutPut_READ();
-		}	
-		
-		if(this.In_Out === "InPut"){
-			DOM_WebMob_InPut_READ();
+			if(this.Status===1){
+				////////////////////////////////////////
+				DOM_WebMob_P_Description.show();	
+				DOM_WebMob_P_UIElement.show();			
+				DOM_WebMob_INP_Description.show();	
+				DOM_WebMob_ELEM_Progress.show();
+				DOM_WebMob_IMG_MOB_SIMUL.show();				
+				////////////////////////////////////////
+				
+				DOM_WebMob_SELECT_OutPut.show();
+				DOM_WebMob_IMG_SAVE_OutPut.show();
+				//DOM_WebMob_IMG_READ_OutPut.show();
+				////////////////////////////////////////
+				DOM_WebMob_OutPut_READ();
+				////////////////////////////////////////
+			}else{
+				
+				
+				dom__WebMob_UI_hide();
+				
+			}
 		}
-		if(this.In_Out === "OutPut"){
-			DOM_WebMob_OutPut_READ();
-		}		
+		//############################################################################
 	};
 	
 	this.hide = function() {

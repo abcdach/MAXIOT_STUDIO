@@ -1109,7 +1109,7 @@ function OBJECT_iot__Device_InPut(Device_name, InPut_index, CREATOR, Status) {
             
             var Device_Index = API_iot_GET__Device_Index(this.Device_name)
             var Device_Type = iot__Device[Device_Index].Device_Type;
-            if (Device_Type === 2) dom__WebMob_Output.show( this.Device_name, this.InPut_index, "InPut" );
+            if (Device_Type === 2) dom__WebMob_Output.show( this.Device_name, this.InPut_index, "InPut",this.Status );
             
             info.announce(1, xText[10] + " " +this.Device_name + " " + xText[28] + " " + this.InPut_index, "");
             Popup_window = 0;
@@ -1260,7 +1260,7 @@ function OBJECT_iot__Device_OutPut(Device_name, OutPut_index, CREATOR, Status) {
             
             var Device_Index = API_iot_GET__Device_Index(this.Device_name)
             var Device_Type = iot__Device[Device_Index].Device_Type;
-            if (Device_Type === 2) dom__WebMob_Output.show( this.Device_name, this.OutPut_index, "OutPut"  );
+            if (Device_Type === 2) dom__WebMob_Output.show( this.Device_name, this.OutPut_index, "OutPut", this.Status);
         
             info.announce(1, xText[10] + " " +this.Device_name + " " + xText[16] + " " + this.OutPut_index, "");
             Popup_window = 0;
