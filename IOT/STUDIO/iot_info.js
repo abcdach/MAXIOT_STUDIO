@@ -139,7 +139,7 @@ function language_EN(){
     xText[14] = "Description:"; 
     xText[15] = "Device:";
     xText[16] = "OutPut:";
-    xText[17] = "Command Packets:";
+    xText[17] = "Debugger Messages:";
     xText[18] = "Data Packets:";
     xText[19] = "Components";
     xText[20] = "Options";
