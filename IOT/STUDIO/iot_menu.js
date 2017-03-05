@@ -197,12 +197,17 @@ function dom__W2_right_left( value ) {
   DOM_WebMob_P_UIElement.position(W2.X + 160, W2.Y  + 18 + 0);//componentis archeva
   DOM_WebMob_SELECT_OutPut.position(W2.X + 160, W2.Y + 50 + 0);
   DOM_WebMob_SELECT_InPut.position(W2.X + 160, W2.Y + 50 + 0);
-  DOM_WebMob_IMG_SAVE_OutPut.position(W2.X + W2.SizeW - 80, W2.Y + W2.SizeH - 50);
-  DOM_WebMob_IMG_SAVE_InPut.position(W2.X + W2.SizeW - 80, W2.Y + W2.SizeH - 50);
+ 
   DOM_WebMob_ELEM_Progress.position(W2.X + 95, W2.Y + 18+50+17);
-  DOM_WebMob_IMG_MOB_SIMUL.position(W2.X + 220, W2.Y + 18+50+50+15);
   
+  DOM_WebMob_IMG_MOB_SIMUL.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 65);
+   
+  DOM_WebMob_IMG_SAVE_OutPut.position(W2.X + 222, W2.Y + 18+50+50+15);
+  DOM_WebMob_IMG_SAVE_InPut.position(W2.X + 222, W2.Y + 18+50+50+15);
   
+  DOM_WE_P1.position(W2.X + 23+20, W2.Y + 90+30);
+  DOM_WE_P2.position(W2.X + 23, W2.Y + 90+45);
+  DOM_WE_Logo.position(W2.X+W2.SizeW/2-100, W1.Y+230);
   ///////////////////////////////////////////////////////////////////////////
   DOM_WebMob_OutPut_UI_None_IMG.position(W2.X + 5, W2.Y + 130);
   DOM_WebMob_OutPut_UI_Flip_Switch_IMG.position(W2.X + 5, W2.Y + 130);

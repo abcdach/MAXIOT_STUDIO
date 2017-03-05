@@ -18,7 +18,9 @@ var DOM_WebMob_ELEM_Progress;
 var DOM_WebMob_OutPut_radio;
 var DOM_WebMob_P_InPut;
 var DOM_WebMob_SELECT_InPut;
-
+var DOM_WE_P1;
+var DOM_WE_P1;
+var DOM_WE_Logo;
 var x111;
 function OBJECT_DOM_WebMob_OutPut() {
 	dom__WebMob_OutPut_UI_None = new OBJECT_DOM_WebMob_OutPut_UI_None();
@@ -94,8 +96,6 @@ function OBJECT_DOM_WebMob_OutPut() {
 	//-----------------------------------------------------
 	DOM_WebMob_SELECT_InPut.option('None','0');
 	DOM_WebMob_SELECT_InPut.option('Text_Input','1');
-	//DOM_WebMob_SELECT_InPut.option('BBBB','2');
-	//DOM_WebMob_SELECT_InPut.option('CCCC','3');
 	DOM_WebMob_SELECT_InPut.changed(DOM_WebMob_SELECT_InPut_Event);	
     //////////////////////////////////////	
 	DOM_WebMob_ELEM_Progress = createElement('progress', '0');
@@ -119,13 +119,41 @@ function OBJECT_DOM_WebMob_OutPut() {
     ////////////////////////////////////// 
     ////////////////////////////////////// 
 	DOM_WebMob_IMG_SAVE_InPut = createImg('pic/Save_1.png');
-	DOM_WebMob_IMG_SAVE_InPut.style('width', '65px');
+	DOM_WebMob_IMG_SAVE_InPut.style('width', '50px');
 	DOM_WebMob_IMG_SAVE_InPut.mousePressed(DOM_WebMob_InPut_SAVE_Processing);
     ////////////////////////////////////// 
 	//DOM_WebMob_IMG_READ_InPut = createImg('pic/1.png');
 	//DOM_WebMob_IMG_READOM_WebMob_IMG_READ_InPutD_InPut.style('width', '65px');
 	//DOM_WebMob_IMG_READ_InPut.mousePressed(DOM_WebMob_InPut_READ);
     ////////////////////////////////////// 	
+	
+	
+	
+	
+	
+    //////////////////////////////////////
+	DOM_WE_P1 = createP("InPut/OutPut configuration option");
+	DOM_WE_P1.style('font-size', '10pt');
+	DOM_WE_P1.style('font-family', 'Arial');
+	DOM_WE_P1.style('color', '#CB4335');;
+	DOM_WE_P1.style('font-weight', 'bold');
+	DOM_WE_P1.style('font-style', 'italic');
+    ////////////////////////////////////// 	
+	DOM_WE_P2 = createP("will be available after saving the project");
+	DOM_WE_P2.style('font-size', '10pt');
+	DOM_WE_P2.style('font-family', 'Arial');
+	DOM_WE_P2.style('color', '#CB4335');;
+	DOM_WE_P2.style('font-weight', 'bold');
+	DOM_WE_P2.style('font-style', 'italic');
+    //////////////////////////////////////	
+	DOM_WE_Logo = createImg('pic/max_4.png');
+	DOM_WE_Logo.style('width', '200px');
+    //////////////////////////////////////	 
+	
+
+	
+	
+	
 
 	this.show = function(Device_Name, OutPut_index, In_Out, Status) {
 		this.Device_Name = Device_Name;
@@ -175,9 +203,11 @@ function OBJECT_DOM_WebMob_OutPut() {
 				DOM_WebMob_InPut_READ();
 				////////////////////////////////////////
 			}else{
-				
+				DOM_WE_P1.show();
+				DOM_WE_P2.show();
+				//DOM_WE_Logo.show();
 				dom__WebMob_UI_hide();
-								
+				info.announce(2,"Device : "+this.Device_Name+" InPut : "+this.OutPut_index,"InPut configuration option will be available after saving the project");					
 			}
 		}
 		//############################################################################
@@ -209,14 +239,18 @@ function OBJECT_DOM_WebMob_OutPut() {
 				////////////////////////////////////////
 				DOM_WebMob_OutPut_READ();
 				////////////////////////////////////////
-			}else{
-				
-				
+			}else{			
+				DOM_WE_P1.show();
+				DOM_WE_P2.show();
+				//DOM_WE_Logo.show();
 				dom__WebMob_UI_hide();
-				
+				info.announce(2,"Device : "+this.Device_Name+" OutPut : "+this.OutPut_index,"OutPut configuration option will be available after saving the project");
 			}
 		}
 		//############################################################################
+	
+		DOM_WE_Logo.show();
+	
 	};
 	
 	this.hide = function() {
@@ -236,7 +270,9 @@ function OBJECT_DOM_WebMob_OutPut() {
 		//DOM_WebMob_IMG_READ_OutPut.hide();
 		DOM_WebMob_IMG_SAVE_InPut.hide();
 		//DOM_WebMob_IMG_READ_InPut.hide();
-		
+		DOM_WE_P1.hide();
+		DOM_WE_P2.hide();
+		DOM_WE_Logo.hide();
 		dom__WebMob_UI_hide();
 	};
 }
