@@ -12,6 +12,7 @@ var dom__WE_Inp1;
 var dom__WE_Inp2;
 var dom__WE_Save_Descr;
 var WE_DEV_ID;
+var dom__WE_P5;
 function OBJECT__DOM__WE() {
 	
     //////////////////////////////////////
@@ -28,26 +29,35 @@ function OBJECT__DOM__WE() {
 	dom__WE_P4.style('font-color', '#AAAAAA');
 	dom__WE_P4.style('font-weight', 'bold');
 	dom__WE_P4.style('font-style', 'italic')
+    //////////////////////////////////////       
+    dom__WE_P5 = createP("Mobile Device Emulator");
+	dom__WE_P5.style('font-size', '10pt');
+	dom__WE_P5.style('font-family', 'Arial');
+	dom__WE_P5.style('font-color', '#AAAAAA');
+	dom__WE_P5.style('font-weight', 'bold');
+	dom__WE_P5.style('font-style', 'italic')
     //////////////////////////////////////         
     dom__WE_Inp1 = createInput(); //"Name:"
 	dom__WE_Inp1.style('width', '60px');
 	dom__WE_Inp1.style('textAlign', 'CENTER');
+	dom__WE_Inp1.style('background-color', '#DAF7A6');
     //////////////////////////////////////
 	dom__WE_Inp2 = createInput(); //"Description:"
 	dom__WE_Inp2.style('width', '165px');
 	dom__WE_Inp2.style('textAlign', 'CENTER');
+	dom__WE_Inp2.style('background-color', '#DAF7A6');
     ////////////////////////////////////// 
-	dom__WE_Save_Descr = createImg('pic/Save_1.png'); //"Description:"
+	dom__WE_Save_Descr = createImg('pic/Save_1.png');
 	dom__WE_Save_Descr.style('width', '38px');
 	dom__WE_Save_Descr.mousePressed(dom__WE_Change_Device_Description);
-    ///////////////////////////////////////////////	
-	
-	
-
+	dom__WE_Save_Descr.mouseOver(function(){dom__WE_Save_Descr.style('width', '39px');});
+	dom__WE_Save_Descr.mouseOut (function(){dom__WE_Save_Descr.style('width', '38px');});
     //////////////////////////////////////
 	dom__WE_mob = createImg('pic/mob/001.png');
 	dom__WE_mob.style('width', '60px');
 	dom__WE_mob.mousePressed(dom__WE_MOB_SIMUL_show);
+	dom__WE_mob.mouseOver(function(){dom__WE_mob.style('width', '61px');});
+	dom__WE_mob.mouseOut (function(){dom__WE_mob.style('width', '60px');});
     ///////////////////////////////////////////////
 	dom__WE_QR = createImg('pic/qr/004.png');
 	dom__WE_QR.style('width', '40px');
@@ -58,9 +68,6 @@ function OBJECT__DOM__WE() {
 	dom__WE_TUN.mousePressed(dom__WE_MOB_SIMUL_show);
     ///////////////////////////////////////////////	
 
-	
-	
-	
     div_QR = createDiv("");
     div_QR.id("qrcode");
 
@@ -98,9 +105,7 @@ function OBJECT__DOM__WE() {
         dom__WE_Inp1.show();
         dom__WE_Inp2.show();
         dom__WE_Save_Descr.show();
-        //dom__WE_QR.show();
-        //dom__WE_TUN.show();
-        
+        dom__WE_P5.show();        
     };
     this.hide = function() {
         
@@ -113,7 +118,7 @@ function OBJECT__DOM__WE() {
         dom__WE_Save_Descr.hide();
         dom__WE_QR.hide();
         dom__WE_TUN.hide();
-        
+        dom__WE_P5.hide();      
     };
 }
 //###############################################################
@@ -130,7 +135,4 @@ function dom__WE_Change_Device_Description() {
 	API_iot_CHANGE__Device_Description(Device_Name,Description);
 	doSave();
 }
-
-
-
 

@@ -56,17 +56,23 @@ function Menu_init() {
     con_002.style('height', '40px');
     //con_002.mousePressed(Menu_Con_Connect);
     con_002.mousePressed(Menu_Con_Password);
+    con_002.mouseOver(function(){con_002.style('width', '74px');});
+    con_002.mouseOut (function(){con_002.style('width', '75px');});
     ///////////////////////////////////////////////
     con_003 = createImg('pic/1_con_003.png');
     con_003.position(28, 39 + MD)
     con_003.style('width', '75px');
     con_003.style('height', '40px');
+    con_003.mouseOver(function(){con_003.style('width', '74px');});
+    con_003.mouseOut (function(){con_003.style('width', '75px');});
     ///////////////////////////////////////////////
     con_004 = createImg('pic/1_con_004.png');
     con_004.position(28, 39 + MD)
     con_004.style('width', '75px');
     con_004.style('height', '40px');
     con_004.mousePressed(Menu_Con_disconnect);
+    con_004.mouseOver(function(){con_004.style('width', '74px');});
+    con_004.mouseOut (function(){con_004.style('width', '75px');});
     ///////////////////////////////////////////////
     line_1 = createImg('pic/line_1.png');
     line_1.position(113, 53 + MD);
@@ -81,12 +87,15 @@ function Menu_init() {
     term_1 = createImg('pic/term1_1.png');
     term_1.position(203, 30 + MD);
     term_1.style('width', '55px');
-    //term_1.mousePressed(dom__Terminal.show);
+    //term_1.mouseOver(function(){term_1.style('width', '54px');});
+    //term_1.mouseOut (function(){term_1.style('width', '55px');});
     ///////////////////////////////////////////////
     term_2 = createImg('pic/term2.png');
     term_2.position(203, 30 + MD);
     term_2.style('width', '55px');
     term_2.mousePressed(dom__Terminal.show);
+    term_2.mouseOver(function(){term_2.style('width', '54px');});
+    term_2.mouseOut (function(){term_2.style('width', '55px');});
     ///////////////////////////////////////////////
     mod_1 = createImg('pic/mod1.png');
     mod_1.position(285, 30 + MD);
@@ -97,7 +106,8 @@ function Menu_init() {
     mod_2.position(285, 30 + MD);
     mod_2.style('width', '55px');
     mod_2.mousePressed(dom__Components.show);
-    
+    mod_2.mouseOver(function(){mod_2.style('width', '54px');});
+    mod_2.mouseOut (function(){mod_2.style('width', '55px');});
     ///////////////////////////////////////////////
     room_x = createImg('pic/room/room_x.jpg');
     room_x.position(364, 34 + MD);
@@ -108,25 +118,33 @@ function Menu_init() {
     room_0.position(364, 34 + MD);
     room_0.style('width', '50px');
     room_0.hide();
-    room_0.mousePressed(dom__Rooms.show); 
+    room_0.mousePressed(dom__Rooms.show);
+    room_0.mouseOver(function(){room_0.style('width', '49px');});
+    room_0.mouseOut (function(){room_0.style('width', '50px');});
     ///////////////////////////////////////////////
     room_1 = createImg('pic/room/room_1.jpg');
     room_1.position(364, 34 + MD);
     room_1.style('width', '50px');
     room_1.hide();
-    room_1.mousePressed(dom__Rooms.show); 
+    room_1.mousePressed(dom__Rooms.show);
+    room_1.mouseOver(function(){room_1.style('width', '49px');});
+    room_1.mouseOut (function(){room_1.style('width', '50px');});
     ///////////////////////////////////////////////   
     room_2 = createImg('pic/room/room_2.jpg');
     room_2.position(364, 34 + MD);
     room_2.style('width', '50px');
     room_2.hide();
-    room_2.mousePressed(dom__Rooms.show); 
+    room_2.mousePressed(dom__Rooms.show);
+    room_2.mouseOver(function(){room_2.style('width', '49px');});
+    room_2.mouseOut (function(){room_2.style('width', '50px');});
     ///////////////////////////////////////////////     
     room_3 = createImg('pic/room/room_3.jpg');
     room_3.position(364, 34 + MD);
     room_3.style('width', '50px');
     room_3.hide();
     room_3.mousePressed(dom__Rooms.show); 
+    room_3.mouseOver(function(){room_3.style('width', '49px');});
+    room_3.mouseOut (function(){room_3.style('width', '50px');});
     ///////////////////////////////////////////////      
     
     
@@ -141,11 +159,15 @@ function Menu_init() {
     Sav_001.style('width', '75px');
     Sav_001.mousePressed(doSave);
     Sav_001.hide();
+    Sav_001.mouseOver(function(){Sav_001.style('width', '74px');});
+    Sav_001.mouseOut (function(){Sav_001.style('width', '75px');});
     ///////////////////////////////////////////////
     Sav_002 = createImg('pic/Save_2.png');
     Sav_002.position(W1.X + W1.SizeW - 75, W1.Y + 23);
     Sav_002.style('width', '75px');;
     Sav_002.hide();
+    Sav_002.mouseOver(function(){Sav_002.style('width', '74px');});
+    Sav_002.mouseOut (function(){Sav_002.style('width', '75px');});
     ///////////////////////////////////////////////
     //Menu_Text[6] = new _Menu_Text(W1.X + W1.SizeW - 45+10, W1.Y +81 ,"save",100);
     ///////////////////////////////////////////////   
@@ -155,6 +177,8 @@ function Menu_init() {
     //Opt_1.style('height','40px');  
     Opt_1.mousePressed(dom__Options.show);
     Opt_1.show();
+    Opt_1.mouseOver(function(){Opt_1.style('width', '59px');});
+    Opt_1.mouseOut (function(){Opt_1.style('width', '60px');});
     ///////////////////////////////////////////////
     Menu_Text[6] = new _Menu_Text(W3.X + W3.SizeW - 38, 97 + MD, xText[20], 0); //"Options"
     ///////////////////////////////////////////////

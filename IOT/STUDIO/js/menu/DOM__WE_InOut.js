@@ -21,6 +21,7 @@ var DOM_WebMob_SELECT_InPut;
 var DOM_WE_P1;
 var DOM_WE_P1;
 var DOM_WE_Logo;
+var DOM_WebMob_P5;
 var x111;
 function OBJECT_DOM_WebMob_OutPut() {
 	dom__WebMob_OutPut_UI_None = new OBJECT_DOM_WebMob_OutPut_UI_None();
@@ -67,6 +68,13 @@ function OBJECT_DOM_WebMob_OutPut() {
 	DOM_WebMob_P_InPut.style('font-weight', 'bold');
 	DOM_WebMob_P_InPut.style('font-style', 'italic');
     //////////////////////////////////////
+	DOM_WebMob_P5 = createP("Mobile Device Emulator");
+	DOM_WebMob_P5.style('font-size', '10pt');
+	DOM_WebMob_P5.style('font-family', 'Arial');
+	DOM_WebMob_P5.style('font-color', '#AAAAAA');
+	DOM_WebMob_P5.style('font-weight', 'bold');
+	DOM_WebMob_P5.style('font-style', 'italic')
+    //////////////////////////////////////
 	DOM_WebMob_INP_InOut_index = createInput();
 	DOM_WebMob_INP_InOut_index.style('width', '60px');
 	DOM_WebMob_INP_InOut_index.style('textAlign', 'CENTER');
@@ -107,27 +115,22 @@ function OBJECT_DOM_WebMob_OutPut() {
 	DOM_WebMob_IMG_MOB_SIMUL = createImg('pic/mob/001.png');
 	DOM_WebMob_IMG_MOB_SIMUL.style('width', '60px');
 	DOM_WebMob_IMG_MOB_SIMUL.mousePressed(DOM_WebMob_IMG_MOB_SIMULile_screen_show);
-
+	DOM_WebMob_IMG_MOB_SIMUL.mouseOver(function(){DOM_WebMob_IMG_MOB_SIMUL.style('width', '61px');});
+	DOM_WebMob_IMG_MOB_SIMUL.mouseOut (function(){DOM_WebMob_IMG_MOB_SIMUL.style('width', '60px');});
     ////////////////////////////////////// 
 	DOM_WebMob_IMG_SAVE_OutPut = createImg('pic/Save_1.png');
-	DOM_WebMob_IMG_SAVE_OutPut.style('width', '65px');
+	DOM_WebMob_IMG_SAVE_OutPut.style('width', '50px');
 	DOM_WebMob_IMG_SAVE_OutPut.mousePressed(DOM_WebMob_OutPut_SAVE_Processing);
-    ////////////////////////////////////// 
-	//DOM_WebMob_IMG_READ_OutPut = createImg('pic/1.png');
-	//DOM_WebMob_IMG_READ_OutPut.style('width', '65px');
-	//DOM_WebMob_IMG_READ_OutPut.mousePressed(DOM_WebMob_OutPut_READ);
-    ////////////////////////////////////// 
+	DOM_WebMob_IMG_SAVE_OutPut.mouseOver(function(){DOM_WebMob_IMG_SAVE_OutPut.style('width', '51px');});
+	DOM_WebMob_IMG_SAVE_OutPut.mouseOut (function(){DOM_WebMob_IMG_SAVE_OutPut.style('width', '50px');});
     ////////////////////////////////////// 
 	DOM_WebMob_IMG_SAVE_InPut = createImg('pic/Save_1.png');
 	DOM_WebMob_IMG_SAVE_InPut.style('width', '50px');
 	DOM_WebMob_IMG_SAVE_InPut.mousePressed(DOM_WebMob_InPut_SAVE_Processing);
+	DOM_WebMob_IMG_SAVE_InPut.mouseOver(function(){DOM_WebMob_IMG_SAVE_InPut.style('width', '51px');});
+	DOM_WebMob_IMG_SAVE_InPut.mouseOut (function(){DOM_WebMob_IMG_SAVE_InPut.style('width', '50px');});
     ////////////////////////////////////// 
-	//DOM_WebMob_IMG_READ_InPut = createImg('pic/1.png');
-	//DOM_WebMob_IMG_READOM_WebMob_IMG_READ_InPutD_InPut.style('width', '65px');
-	//DOM_WebMob_IMG_READ_InPut.mousePressed(DOM_WebMob_InPut_READ);
-    ////////////////////////////////////// 	
-	
-	
+
 	
 	
 	
@@ -193,7 +196,8 @@ function OBJECT_DOM_WebMob_OutPut() {
 				DOM_WebMob_P_UIElement.show();			
 				DOM_WebMob_INP_Description.show();	
 				DOM_WebMob_ELEM_Progress.show();
-				DOM_WebMob_IMG_MOB_SIMUL.show();			
+				DOM_WebMob_IMG_MOB_SIMUL.show();
+				DOM_WebMob_P5.show();
 				////////////////////////////////////////
 				
 				DOM_WebMob_SELECT_InPut.show();
@@ -230,7 +234,8 @@ function OBJECT_DOM_WebMob_OutPut() {
 				DOM_WebMob_P_UIElement.show();			
 				DOM_WebMob_INP_Description.show();	
 				DOM_WebMob_ELEM_Progress.show();
-				DOM_WebMob_IMG_MOB_SIMUL.show();				
+				DOM_WebMob_IMG_MOB_SIMUL.show();
+				DOM_WebMob_P5.show();
 				////////////////////////////////////////
 				
 				DOM_WebMob_SELECT_OutPut.show();
@@ -273,6 +278,7 @@ function OBJECT_DOM_WebMob_OutPut() {
 		DOM_WE_P1.hide();
 		DOM_WE_P2.hide();
 		DOM_WE_Logo.hide();
+		DOM_WebMob_P5.hide();
 		dom__WebMob_UI_hide();
 	};
 }

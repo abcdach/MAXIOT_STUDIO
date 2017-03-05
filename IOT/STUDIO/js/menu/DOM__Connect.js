@@ -24,6 +24,8 @@ function OBJECT_DOM_Connect() {
     dom__Connect_Con = createImg('pic/cone.png');
     dom__Connect_Con.style('width', '60px');
     dom__Connect_Con.mousePressed(Menu_Con_Connect);
+    dom__Connect_Con.mouseOver(function(){dom__Connect_Con.style('width', '59px');});
+    dom__Connect_Con.mouseOut (function(){dom__Connect_Con.style('width', '60px');});
     /////////////////////////////////////////////// 
     dom__Connect_Logo = createImg('pic/max_2.png');
     dom__Connect_Logo.style('width', '200px');

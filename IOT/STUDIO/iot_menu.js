@@ -155,16 +155,18 @@ function dom__W2_right_left( value ) {
   dom__WE_Inp2.position(W2.X + 85, W2.Y + 50);
   dom__WE_Save_Descr.position(W2.X + 260, W2.Y + 49);
   div_QR.position(W2.X + (W2.SizeW - 150)/2 , W2.Y + (W2.SizeH - 20 - 150)/2  );
-  dom__WE_mob.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 65);
+
   dom__WE_QR.position(W2.X + W2.SizeW - 101, W4.Y + W2.SizeH - 50);
   dom__WE_TUN.position(W2.X + W2.SizeW - 155, W4.Y + W2.SizeH - 50);
+  dom__WE_mob.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 85);
+  dom__WE_P5.position(W2.X + W2.SizeW - 165, W2.Y + W2.SizeH-40);
   // DE #######################################
   dom__DE_P3.position(W2.X + 10, W2.Y + 18);
   dom__DE_P4.position(W2.X + 85, W2.Y + 18);
   dom__DE_Inp1.position(W2.X + 10, W2.Y + 50);
   dom__DE_Inp2.position(W2.X + 85, W2.Y + 50);  
-  dom__DE_Save_Descr.position(W2.X + 260, W2.Y + 49);
-  
+  //dom__DE_Save_Descr.position(W2.X + 260, W2.Y + 49);
+  dom__DE_Logo.position(W2.X+W2.SizeW/2-100, W1.Y+230);
   //mediator1 #################################
   dom__ME_P3.position(W2.X + 10, W2.Y + 18);
   dom__ME_P4.position(W2.X + 85, W2.Y + 18);
@@ -200,13 +202,17 @@ function dom__W2_right_left( value ) {
  
   DOM_WebMob_ELEM_Progress.position(W2.X + 95, W2.Y + 18+50+17);
   
-  DOM_WebMob_IMG_MOB_SIMUL.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 65);
+  //DOM_WebMob_IMG_MOB_SIMUL.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 65);
    
+  DOM_WebMob_IMG_MOB_SIMUL.position(W2.X + W2.SizeW - 60, W4.Y + W2.SizeH - 85);
+  DOM_WebMob_P5.position(W2.X + W2.SizeW - 165, W2.Y + W2.SizeH-40);//!!!!!!
+  
+  
   DOM_WebMob_IMG_SAVE_OutPut.position(W2.X + 222, W2.Y + 18+50+50+15);
   DOM_WebMob_IMG_SAVE_InPut.position(W2.X + 222, W2.Y + 18+50+50+15);
   
-  DOM_WE_P1.position(W2.X + 23+20, W2.Y + 90+30);
-  DOM_WE_P2.position(W2.X + 23, W2.Y + 90+45);
+  DOM_WE_P1.position(W2.X+W2.SizeW/2-125+20, W2.Y + 90+30);
+  DOM_WE_P2.position(W2.X+W2.SizeW/2-125, W2.Y + 90+45);
   DOM_WE_Logo.position(W2.X+W2.SizeW/2-100, W1.Y+230);
   ///////////////////////////////////////////////////////////////////////////
   DOM_WebMob_OutPut_UI_None_IMG.position(W2.X + 5, W2.Y + 130);

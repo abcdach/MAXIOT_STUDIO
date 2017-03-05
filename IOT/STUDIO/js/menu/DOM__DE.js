@@ -2,7 +2,7 @@ var dom__DE_P3;
 var dom__DE_P4;
 //var dom__DE_Inp1;
 //var dom__DE_Inp2;
-
+var dom__DE_Logo;
 function OBJECT__DOM__DE() {
 
 	
@@ -24,16 +24,20 @@ function OBJECT__DOM__DE() {
     dom__DE_Inp1 = createInput(); //"Name:"
 	dom__DE_Inp1.style('width', '60px');
 	dom__DE_Inp1.style('textAlign', 'CENTER');
+	dom__DE_Inp1.style('background-color', '#DAF7A6');
     //////////////////////////////////////
 	dom__DE_Inp2 = createInput(); //"Description:"
 	dom__DE_Inp2.style('width', '165px');
 	dom__DE_Inp2.style('textAlign', 'CENTER');
+	dom__DE_Inp2.style('background-color', '#DAF7A6');
     ////////////////////////////////////// 
-	dom__DE_Save_Descr = createImg('pic/Save_1.png'); //"Description:"
-	dom__DE_Save_Descr.style('width', '38px');
-	dom__DE_Save_Descr.mousePressed(dom__DE_Change_Device_Description);
+	//dom__DE_Save_Descr = createImg('pic/Save_1.png'); //"Description:"
+	//dom__DE_Save_Descr.style('width', '38px');
+	//dom__DE_Save_Descr.mousePressed(dom__DE_Change_Device_Description);
     ///////////////////////////////////////////////	 
-	
+	dom__DE_Logo = createImg('pic/max_4.png');
+	dom__DE_Logo.style('width', '200px');
+    //////////////////////////////////////
 	
 	
     this.show = function(x, y, Device_Name, Device_Index, Device_Name_Text, Device_Type) {
@@ -55,7 +59,8 @@ function OBJECT__DOM__DE() {
         dom__DE_P4.show();
         dom__DE_Inp1.show();
         dom__DE_Inp2.show();
-        dom__DE_Save_Descr.show();
+        //dom__DE_Save_Descr.show();
+        dom__DE_Logo.show();
         
     };
     this.hide = function() {
@@ -64,12 +69,13 @@ function OBJECT__DOM__DE() {
         dom__DE_P4.hide();
         dom__DE_Inp1.hide();
         dom__DE_Inp2.hide();
-        dom__DE_Save_Descr.hide();
+        dom__DE_Logo.hide();
+        //dom__DE_Save_Descr.hide();
     };
 }
 //###############################################################
-function dom__DE_Change_Device_Description() {
-	var Device_Name = Number(dom__DE_Inp1.value());
-	var Description = dom__DE_Inp2.value();
-	API_iot_CHANGE__Device_Description(Device_Name,Description);
-}
+//function dom__DE_Change_Device_Description() {
+//	var Device_Name = Number(dom__DE_Inp1.value());
+//	var Description = dom__DE_Inp2.value();
+//	API_iot_CHANGE__Device_Description(Device_Name,Description);
+//}

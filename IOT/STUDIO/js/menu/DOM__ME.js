@@ -35,10 +35,12 @@ function OBJECT__DOM__ME() {
     dom__ME_Inp1 = createInput();
     dom__ME_Inp1.style('width', '60px');
     dom__ME_Inp1.style('textAlign', 'CENTER');
+    dom__ME_Inp1.style('background-color', '#DAF7A6');
     //////////////////////////////////////
     dom__ME_Inp2 = createInput();
     dom__ME_Inp2.style('width', '199px');
     dom__ME_Inp2.style('textAlign', 'CENTER');
+    dom__ME_Inp2.style('background-color', '#DAF7A6');
     //////////////////////////////////////     
 	//dom__ME_Save_Descr = createImg('pic/Save_1.png'); //"Description:"
 	//dom__ME_Save_Descr.style('width', '38px');
